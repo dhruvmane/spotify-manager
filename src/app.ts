@@ -36,10 +36,9 @@ client.on('interactionCreate', interactionCreate);
 async function main() {
   await client.getAllRoutes();
   const commandData = client.commands.map(command => command.data.toJSON());
-    await rest.put(Routes.applicationGuildCommands(process.env.CLIENT_ID!, process.env.TESTING_GUILD_ID!), {
-      body: commandData
-    })
-  
+  await rest.put(Routes.applicationGuildCommands(process.env.CLIENT_ID!, process.env.TESTING_GUILD_ID!), {
+    body: commandData
+  })
 
   // client TOKEN INSERTION
   client.login(TOKEN)
