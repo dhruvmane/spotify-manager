@@ -1,7 +1,7 @@
 // MAIN ENDPOINT OF client
 
 import 'dotenv/config'
-import { REST, Routes, GatewayIntentBits } from "discord.js"           // CLIENTS
+import { REST, Routes, GatewayIntentBits } from "discord.js"
 import { Collection } from "discord.js"           
 import { SpotifyManagerClient } from './client.ts'
 

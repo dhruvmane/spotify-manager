@@ -41,7 +41,9 @@ export const paymentMode = pgEnum("payment_mode", [
 
 export const users = pgTable("users", {
   discordClientId: varchar().notNull(),
-  status: invoiceStatus().default("DUE")
+  status: invoiceStatus().default("DUE"),
+  nextMonthDue: billingMonth(),
+  nextMonthYear: integer(),
 })
 
 // BILLING HISTORY INVOICES
